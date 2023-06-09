@@ -1,0 +1,15 @@
+<mvc:View
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    controllerName="com.ss.jpb.rp.controller.Competencies"
+>
+    <Page
+        title="Competencies"
+        showNavButton="true"
+        navButtonPress="onBack"
+    >
+        <content>
+            <!-- <Button text="Back" icon="sap-icon://arrow-left" press="onBack"></Button> -->
+        </content>
+    </Page>
+</mvc:View>

@@ -1,0 +1,7 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.ss.jpb.rp.controller.Family">
+    <Page title="Families" showNavButton="true" navButtonPress="onBack">
+        <content>
+            <SplitApp ></SplitApp>
+        </content>
+    </Page>
+</mvc:View>

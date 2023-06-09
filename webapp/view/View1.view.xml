@@ -1,0 +1,52 @@
+<mvc:View
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    controllerName="com.ss.jpb.rp.controller.View1"
+>
+    <Page title="Manage Job Profile Content" >
+        <headerContent>
+            <!-- <Button
+                tooltip="Go to the next screen"
+                icon="sap-icon://arrow-right"
+                press="onNext"
+            /> -->
+        </headerContent>
+        
+        <content>
+
+            <GenericTile
+                class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout"
+                header="Families"
+                subheader="Check job families"
+                press="onFamily"
+            >
+                <TileContent >                    
+                    <ImageContent src="sap-icon://family-care" />
+                </TileContent>
+            </GenericTile>
+
+            <GenericTile
+                class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout"
+                header="Roles"
+                subheader="Check job roles"
+                press="onRole"
+            >
+                <TileContent >                    
+                    <ImageContent src="sap-icon://role" />
+                </TileContent>
+            </GenericTile>
+
+            <GenericTile
+                class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout"
+                header="Competencies"
+                press="onCompetencies"
+                subheader=""
+            >
+                <TileContent>                    
+                    <ImageContent src="sap-icon://documents" />
+                </TileContent>
+            </GenericTile>
+
+        </content>
+    </Page>
+</mvc:View>
