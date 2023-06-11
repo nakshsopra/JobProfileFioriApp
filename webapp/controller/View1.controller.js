@@ -11,18 +11,24 @@ sap.ui.define([
         },
 
         onFamily: function(){
-            var oAppCon = this.getView().getParent();
-            oAppCon.to("idFamily");
+            // var oAppCon = this.getView().getParent();
+            // oAppCon.to("idFamily");
+            var oRouter = this.getOwnerComponent().getRouter();
+            oRouter.navTo("family");
         },
 
         onRole: function(){
-            var oAppCon = this.getView().getParent();
-            oAppCon.to("idRole");
+            // var oAppCon = this.getView().getParent();
+            // oAppCon.to("idRole");
+            var oRouter = this.getOwnerComponent().getRouter();
+            oRouter.navTo("role");
         },
 
         onCompetencies: function(){
-            var oAppCon = this.getView().getParent();
-            oAppCon.to("idCompetencies");
+            // var oAppCon = this.getView().getParent();
+            // oAppCon.to("idCompetencies");
+            var oRouter = this.getOwnerComponent().getRouter();
+            oRouter.navTo("competencies");
         }
 
     });

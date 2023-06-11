@@ -1,5 +1,109 @@
 {
+    "_version": "1.1.0",
+
     "sap.app": {
-        "id": "com.ss.jpb.rp"
+        "id": "com.ss.jpb.rp",
+        "type": "application",
+        "title": "{{appTitle}}",
+        "description": "{{appDescription}}",
+        "applicationVersion": {
+            "version": "1.0.0"
+        }
+    },
+
+    "sap.ui":{
+        "supportedThemes": ["sap_fiori_3_dark", "sap_horizon"],
+        "deviceTypes":{
+            "desktop": true,
+            "phone": true,
+            "tablet": true
+        },
+        "technology": "UI5"
+    },
+
+    "sap.ui5":{
+
+        "dependencies": {
+            "minUI5Version": "1.100.2",
+            "libs": {
+                "sap.m":{"minVersion": "1.100.2"},
+                "sap.ui.core":{"minVersion": "1.100.2"},
+                "sap.ui.layout":{"minVersion": "1.100.2"}
+            }
+        },
+
+        "rootView":{
+            "viewName": "com.ss.jpb.rp.view.App",
+            "type": "XML",
+            "id": "idRoot"
+        },
+
+        "routing": {
+            "config":{
+                "viewPath": "com.ss.jpb.rp.View",
+                "viewType": "XML",
+                "controlId": "appCon",
+                "clearControlAggregation": true
+            },
+            "routes":[
+                {
+                    "name": "home",
+                    "pattern": "",
+                    "target":["view1"]
+                },
+                {
+                    "name": "family",
+                    "pattern": "family",
+                    "target":["family"]
+                },
+                {
+                    "name": "role",
+                    "pattern": "role",
+                    "target":["role"]
+                },
+                {
+                    "name": "competencies",
+                    "pattern": "competencies",
+                    "target":["competencies"]
+                }
+            ],
+            "targets": {
+                "view1":{
+                    "viewName": "View1",
+                    "viewId": "idView1",
+                    "controlAggregation": "pages"
+                },
+                "family":{
+                    "viewName": "Family",
+                    "viewId": "idFamily",
+                    "controlAggregation": "pages"
+                },
+                "role":{
+                    "viewName": "role",
+                    "viewId": "idRole",
+                    "controlAggregation": "pages"
+                },
+                "competencies":{
+                    "viewName": "Competencies",
+                    "viewId": "idCompetencies",
+                    "controlAggregation": "pages"
+                }
+                
+            }
+        },
+
+        "contentDensities": {
+            "compact": true, 
+            "cozy": true
+        },
+
+        "models": {
+            "i18n":{
+                "type": "sap.ui.model.resource.ResourceModel",
+                "settings": {
+                    "bundleUrl": "i18n/i18n.properties"
+                }
+            }
+        }
     }
 }
