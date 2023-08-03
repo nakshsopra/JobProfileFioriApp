@@ -40,7 +40,7 @@
 
         "routing": {
             "config":{
-                "viewPath": "com.ss.jpb.rp.View",
+                "viewPath": "com.ss.jpb.rp.view",
                 "viewType": "XML",
                 "controlId": "appCon",
                 "clearControlAggregation": true
@@ -79,7 +79,7 @@
                     "controlAggregation": "pages"
                 },
                 "role":{
-                    "viewName": "role",
+                    "viewName": "Role",
                     "viewId": "idRole",
                     "controlAggregation": "pages"
                 },

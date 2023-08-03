@@ -9,7 +9,7 @@
         navButtonPress="onBack"
     >
         <content>
-            <!-- <Button text="Back" icon="sap-icon://arrow-left" press="onBack"></Button> -->
+
         </content>
     </Page>
 </mvc:View>
