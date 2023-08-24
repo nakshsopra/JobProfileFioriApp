@@ -1,5 +1,5 @@
 <mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.ss.jpb.rp.controller.Role">
-    <Page title="Roles" showNavButton="true" navButtonPress="onBack">
+    <Page title="{i18n>Roles}" showNavButton="true" navButtonPress="onBack">
         <content>
             <SplitApp ></SplitApp>
         </content>

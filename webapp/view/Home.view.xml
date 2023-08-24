@@ -1,7 +1,7 @@
 <mvc:View
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m"
-    controllerName="com.ss.jpb.rp.controller.View1"
+    controllerName="com.ss.jpb.rp.controller.Home"
 >
     <Page title="{i18n>appTitle}" >
         <headerContent>
@@ -11,8 +11,8 @@
 
             <GenericTile
                 class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout"
-                header="Families"
-                subheader="Check job families"
+                header="{i18n>Families}"
+                subheader="{i18n>descriptionFamilies}"
                 press="onFamily"
             >
                 <TileContent >                    
@@ -22,8 +22,8 @@
 
             <GenericTile
                 class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout"
-                header="Roles"
-                subheader="Check job roles"
+                header="{i18n>Roles}"
+                subheader="{i18n>descriptionRoles}"
                 press="onRole"
             >
                 <TileContent >                    
@@ -33,7 +33,7 @@
 
             <GenericTile
                 class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout"
-                header="Competencies"
+                header="{i18n>Competencies}"
                 press="onCompetencies"
                 subheader=""
             >

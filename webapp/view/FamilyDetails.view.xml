@@ -1,0 +1,9 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.ss.jpb.rp.controller.FamilyDetails">
+    <Page title="Families" showNavButton="true" navButtonPress="onBack">
+        <IconTabBar>
+            <items>
+            <IconTabFilter text="More info"></IconTabFilter>
+            </items>
+        </IconTabBar>
+    </Page>
+</mvc:View>

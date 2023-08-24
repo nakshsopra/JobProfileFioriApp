@@ -8,7 +8,17 @@
         "description": "{{appDescription}}",
         "applicationVersion": {
             "version": "1.0.0"
-        }
+        },
+        
+        "dataSources": {
+            "apiSalesDemo": {
+              "uri": "https://apisalesdemo2.successfactors.eu/odata/v2/",
+              "type": "OData",
+              "settings": {
+                "odataVersion": "2.0"
+              }
+            }
+          }
     },
 
     "sap.ui":{
@@ -18,7 +28,8 @@
             "phone": true,
             "tablet": true
         },
-        "technology": "UI5"
+        "technology": "UI5",
+        "fullWidth": true
     },
 
     "sap.ui5":{
@@ -49,12 +60,12 @@
                 {
                     "name": "home",
                     "pattern": "",
-                    "target":["view1"]
+                    "target":["home"] 
                 },
                 {
                     "name": "family",
                     "pattern": "family",
-                    "target":["family"]
+                    "target":["family", "familyDetails"]
                 },
                 {
                     "name": "role",
@@ -68,15 +79,20 @@
                 }
             ],
             "targets": {
-                "view1":{
-                    "viewName": "View1",
-                    "viewId": "idView1",
+                "home":{
+                    "viewName": "Home",
+                    "viewId": "idHome",
                     "controlAggregation": "pages"
                 },
                 "family":{
                     "viewName": "Family",
                     "viewId": "idFamily",
                     "controlAggregation": "pages"
+                },
+                "familyDetails":{
+                    "viewName": "FamilyDetails",
+                    "viewId": "idFamilyDetails",
+                    "controlAggregation": "detailPages"
                 },
                 "role":{
                     "viewName": "Role",
@@ -98,6 +114,19 @@
         },
 
         "models": {
+            "":{
+                "type": "sap.ui.model.json.JSONModel",
+                "uri": "models/fruits.json",
+                "settings": {}
+            },
+            
+            "odataModel":{
+                "dataSource": "apiSalesDemo",
+                "settings": {
+
+                }
+            },
+
             "i18n":{
                 "type": "sap.ui.model.resource.ResourceModel",
                 "settings": {

@@ -1,7 +1,35 @@
-<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.ss.jpb.rp.controller.Family">
-    <Page title="Families" showNavButton="true" navButtonPress="onBack">
+<mvc:View
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    controllerName="com.ss.jpb.rp.controller.Family"
+>
+    <Page
+        title="Families"
+        showNavButton="true"
+        navButtonPress="onBack"
+    >
         <content>
-            <SplitApp ></SplitApp>
+            <SplitApp>
+                <masterPages>
+                    <List
+                        mode="SingleSelectMaster"
+                        id="idList"
+                        selectionChange="onSelectItem"
+                        growingScrollToLoad="true"
+                        items="{path: '/fruits'}"
+                    >
+                    <items>
+                    <!-- To display business object for user -->
+                    <ObjectListItem  title="{name}" 
+                    intro="{taste}" 
+                    number="{price}" 
+                    numberUnit="{curr}" 
+                    ></ObjectListItem>
+                    
+                </items>
+                    </List>
+                </masterPages>
+            </SplitApp>
         </content>
     </Page>
 </mvc:View>
