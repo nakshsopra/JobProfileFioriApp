@@ -1,7 +1,66 @@
-<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.ss.jpb.rp.controller.Role">
-    <Page title="{i18n>Roles}" showNavButton="true" navButtonPress="onBack">
+<mvc:View
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    controllerName="com.ss.jpb.rp.controller.Role"
+>
+    <Page
+        title="{i18n>Roles}"
+        showNavButton="true"
+        navButtonPress="onBack"
+    >
         <content>
-            <SplitApp ></SplitApp>
+            <SplitApp>
+                <masterPages>
+                    <List
+                        mode="MultiSelect"
+                        id="idList"
+                        selectionChange="onSelectItem"
+                        growingScrollToLoad="true"
+                        items="{path: '/fruits'}"
+                    >
+                        <items>
+                            <!-- To display business object for user -->
+                            <ObjectListItem
+                                title="{name}"
+                                intro="{taste}"
+                                number="{price}"
+                                numberUnit="{curr}"
+                            />
+                        </items>
+                    </List>
+                </masterPages>
+                <detailPages>
+                    <IconTabBar>
+                        <items>
+                            <!-- Tab1 -->
+                            <IconTabFilter
+                                text="More Info"
+                                icon="sap-icon://warning"
+                            />
+                            <!-- Tab2 -->
+                            <IconTabFilter
+                                text="Suppliers"
+                                icon="sap-icon://supplier"
+                            />
+                            <!-- Tab3 -->
+                            <IconTabFilter
+                                text="Cities"
+                                icon="sap-icon://home"
+                            />
+                        </items>
+                    </IconTabBar>
+                </detailPages>
+            </SplitApp>
         </content>
+        <footer>
+            <Toolbar>
+                <ToolbarSpacer />
+                <Button
+                    text="Compare"
+                    press="onCompare"
+                    type="Accept"
+                />
+            </Toolbar>
+        </footer>
     </Page>
 </mvc:View>

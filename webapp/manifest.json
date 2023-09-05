@@ -12,7 +12,7 @@
         
         "dataSources": {
             "apiSalesDemo": {
-              "uri": "https://apisalesdemo2.successfactors.eu/odata/v2/",
+              "uri": "/odata/v2/",
               "type": "OData",
               "settings": {
                 "odataVersion": "2.0"
@@ -92,7 +92,10 @@
                 "familyDetails":{
                     "viewName": "FamilyDetails",
                     "viewId": "idFamilyDetails",
-                    "controlAggregation": "detailPages"
+                    "controlAggregation": "detailPages",
+                    "controlId": "id-family-splitapp",
+                    "targetParent": "idFamily",
+                    "parent": "family"
                 },
                 "role":{
                     "viewName": "Role",
@@ -114,14 +117,16 @@
         },
 
         "models": {
-            "":{
+            "old":{
                 "type": "sap.ui.model.json.JSONModel",
                 "uri": "models/fruits.json",
                 "settings": {}
             },
             
-            "odataModel":{
+            "":{
+                
                 "dataSource": "apiSalesDemo",
+                "preload": true,
                 "settings": {
 
                 }

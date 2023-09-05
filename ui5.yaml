@@ -2,3 +2,11 @@ specVersion: '3.0'
 metadata:
   name: fiorilikeapp
 type: application
+server:
+  customMiddleware:
+  - name: fiori-tools-proxy
+    afterMiddleware: compression
+    configuration:
+      backend:
+      - path: /odata
+        url: https://apisalesdemo2.successfactors.eu/odata/v2

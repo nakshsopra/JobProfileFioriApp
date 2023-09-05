@@ -2,7 +2,18 @@
     <Page title="Families" showNavButton="true" navButtonPress="onBack">
         <IconTabBar>
             <items>
-            <IconTabFilter text="More info"></IconTabFilter>
+                <!-- Tab1 -->
+                <IconTabFilter text="More Info" icon="sap-icon://warning">
+                    
+                </IconTabFilter>
+                <!-- Tab2 -->
+                <IconTabFilter text="Suppliers" icon="sap-icon://supplier">
+                    
+                </IconTabFilter>
+                <!-- Tab3 -->
+                <IconTabFilter text="Cities" icon="sap-icon://home">
+                    
+                </IconTabFilter>
             </items>
         </IconTabBar>
     </Page>

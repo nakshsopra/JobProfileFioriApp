@@ -8,9 +8,11 @@ sap.ui.define([
             var oRouter = this.getOwnerComponent().getRouter();
             oRouter.navTo("home");
         },
-        onSelectItem: function(){
-            var oRouter = this.getOwnerComponent().getRouter();
-            oRouter.navTo("family");
+        onSelectItem: function(oEvent){
+            var oSelectedItem = oEvent.getParameter("listItem");
+            var sPath = oSelectedItem.getBindingContextPath();
+            var sIndex = sPath.split("/")[sPath.split("/").length - 1 ];
+            //this.onGoTo(sIndex);
         }
     });
 });

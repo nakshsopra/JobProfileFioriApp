@@ -9,21 +9,19 @@
         navButtonPress="onBack"
     >
         <content>
-            <SplitApp>
+            <SplitApp id="id-family-splitapp">
                 <masterPages>
                     <List
                         mode="SingleSelectMaster"
                         id="idList"
                         selectionChange="onSelectItem"
                         growingScrollToLoad="true"
-                        items="{path: '/fruits'}"
+                        items="{path: '/JobProfile'}"
                     >
                     <items>
-                    <!-- To display business object for user -->
-                    <ObjectListItem  title="{name}" 
-                    intro="{taste}" 
-                    number="{price}" 
-                    numberUnit="{curr}" 
+                    
+                    <ObjectListItem  title="{name_en_US}" 
+                    intro="{position}" 
                     ></ObjectListItem>
                     
                 </items>
